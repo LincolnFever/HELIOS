@@ -86,9 +86,9 @@ input, select, textarea {
 		background: #f0f4f4;
 		color: #5b5b5b;
 		font-size: 15pt;
-		line-height: 1.85em;
+		line-height: 1.5em;
 		font-family: 'Source Sans Pro', sans-serif;
-		font-weight: 300;
+		font-weight: 250;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2043,7 +2043,7 @@ input, select, textarea {
 			}
 
 			table.default tfoot {
-				border-top: solid 2px #e5e5e5;
+				border-top: solid 5px #e5e5e5;
 			}
 
 /* Button */
@@ -2176,13 +2176,13 @@ input, select, textarea {
 
 	#header {
 		position: relative;
-		background-image: url("../../images/MORGANE\ XUAN\ \(4\).jpg");
+		/* background-image: url("../../images/MORGANE\ XUAN\ \(4\).jpg"); */
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
-		color: #fff;
+		color: #5f3838;
 		text-align: center;
-		padding: 7.5em 0 2em 0;
+		padding: 7em 0 2em 0;
 		cursor: default;
 	}
 
@@ -2279,12 +2279,25 @@ input, select, textarea {
 		opacity: 1;
 	}
 
+	#bg-video {
+		position: fixed;
+		top: 0;
+		left: 0;
+		min-width: 100vw;
+		min-height: 100vh;
+		width: auto;
+		height: auto;
+		z-index: -1;
+		object-fit: cover;
+		pointer-events: none;
+	}
+
 /* Nav */
 
 	#nav {
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: 0;            
 		width: 100%;
 		text-align: center;
 		padding: 1.5em 0 1.5em 0;
