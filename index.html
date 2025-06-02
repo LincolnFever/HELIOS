@@ -82,6 +82,8 @@
 									<p>
 										Vous avez tout donné pour créer votre entreprise. Vous avez longtemps étudié ou avez été formé pour proposer 
 	un service de qualité professionnel à vos clients et clientes.
+									    <span class="dots">...</span>
+										<span class="more-text" style="display: none;">
 	<br>Ce serait dommage de ne pas accorder la même attention à votre <b>communication</b>. 
 	<br>Je vous propose de venir tourner une <b>vidéo</b> dans votre entreprise pour mettre en avant votre expertise. 
 	<br>La vidéo est l'ultime outil de communication. Elle va permettre à vos potentiels clients de faire <b>le premier pas</b> pour venir vous voir. 
@@ -90,7 +92,9 @@
 	C’est une manière créer un lien humain, en montrant votre visage et en faisant entendre votre voix. 
 	<br>Il n’est pas forcément évident de parler face à la caméra, mais nous prendrons le temps 
 	<br>jusqu’à ce que vous soyez à l’aise et satisfait.e du résultat.
+										</span>
 									</p>
+									<button class="read-more-btn">Read more</button>
 								</article>
 								<article class="col-4 col-12-mobile special">
 									<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
@@ -102,6 +106,8 @@
 	<br>cette journée incroyable et unique dans votre vie mais aussi de pouvoir la <b>partager</b> avec les personnes qui n’ont pas pu participer à l’évènement. 
 	<br>Je pense notamment aux enfants que vous avez peut-être prévu d’avoir. 
 	<br>Mais laissez-moi vous présenter ma façon de travailler.
+										<span class="dots">...</span>
+  										<span class="more-text" style="display: none;">
 	<br>Nous nous rencontrerons avant le <b>Jour J</b> pour deux raisons.
 	<br><b>La première</b> :  Pour faire connaissance. Il est important de passer du temps ensemble afin de se sentir le plus à l’aise possible et en confiance. 
 	<br>C’est un moment détendu, plusieurs mois avant la célébration pendant lequel je m’assure de bien comprendre vos attentes.  
@@ -109,7 +115,9 @@
 	<br>et j’apprendrai à travailler avec vous. Pour avoir procédé ainsi à plusieurs reprises, je peux vous assurer que cela fait toute la différence. 
 	<br><b>La capture d’une vidéo</b> n’est pas qu’un exercice technique, c’est surtout un exercice humain.  Ainsi, le fait de nous rencontrer une première 
 	<br>fois fait que je ne serai plus un inconnu, mais une personne avec laquelle vous aurez échangé.
+										</span>
 									</p>
+									<button class="read-more-btn">Read more</button>
 								</article>
 								<article class="col-4 col-12-mobile special">
 									<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
@@ -119,10 +127,14 @@
 									<p>
 										Les nombreux besoins de communication d’une entreprise. 
 	<br>Un événement pour fêter les 2 ans de l’ouverture d’un restaurant. 
+										<span class="dots">...</span>
+  										<span class="more-text" style="display: none;">	
 	<br>Par exemple, dans cette levée de fond, la publication de la vidéo a provoqué un sursaut dans les dons. 
 	<br>Valoriser votre événement, booster la <b>visibilité</b> de votre image d’entreprise dynamique.
 	<br><b>outil marketing puissant</b>.
+										</span>
 									</p>
+									<button class="read-more-btn">Read more</button>
 								</article>
 							</div>
 						</section>
@@ -312,6 +324,29 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			document.addEventListener("DOMContentLoaded", function () {
+			const buttons = document.querySelectorAll(".read-more-btn");
+
+			buttons.forEach(function (btn) {
+				btn.addEventListener("click", function () {
+				const paragraph = btn.previousElementSibling;
+				const dots = paragraph.querySelector(".dots");
+				const moreText = paragraph.querySelector(".more-text");
+
+				if (dots.style.display === "none") {
+					dots.style.display = "inline";
+					moreText.style.display = "none";
+					btn.textContent = "Read more";
+				} else {
+					dots.style.display = "none";
+					moreText.style.display = "inline";
+					btn.textContent = "Read less";
+				}
+				});
+			});
+			});
+			</script>
 
 	</body>
 </html>
