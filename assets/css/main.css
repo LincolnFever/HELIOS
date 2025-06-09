@@ -2186,29 +2186,6 @@ input, select, textarea {
 		cursor: default;
 	}
 
-	@media only screen and (max-width: 768px) {
-	#header {
-		height: 100dvh; /* Use full height on mobile */
-		min-height: 100dvh; /* Ensure minimum height too */
-		max-height: 100dvh;
-		padding: 0; /* Remove excessive top/bottom padding */
-		margin: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		overflow: hidden;
-		/* border: 5px solid red; */
-	}
-
-	.header-content {
-		padding: 1rem;
-		font-size: 1rem;
-		z-index: 2; /* Make sure it shows above the video */
-	}
-
-	}
-
 		#header:before {
 			content: '';
 			display: inline-block;
@@ -2318,24 +2295,6 @@ input, select, textarea {
 	/* Show desktop video by default */
 	#bg-video-mobile {
 	display: none;
-	}
-
-	/* Show mobile video only on small screens */
-	@media only screen and (max-width: 768px) {
-	#bg-video-desktop {
-		display: none;
-	}
-
-	#header {
-		background-attachment: scroll !important;
-	}
-
-	#bg-video-mobile {
-		display: block;
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-	}
 	}
 
 	.video-wrapper1 {
@@ -2997,14 +2956,24 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-attachment: scroll;
-				padding: 2.5em 0 0 0;
+				height: 100dvh !important;
+				min-height: 100dvh !important;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 1em;
+				box-sizing: border-box;
+				background-size: cover;
+  				background-position: center;
 			}
 
 				#header .inner {
 					padding-top: 1.5em;
 					padding-left: 1em;
 					padding-right: 1em;
+					max-width: 100%;
+					box-sizing: border-box;
 				}
 
 				#header header > p {
@@ -3013,6 +2982,7 @@ input, select, textarea {
 
 				#header h1 {
 					font-size: 1.75em;
+					word-wrap: break-word;
 				}
 
 				#header hr {
@@ -3032,6 +3002,21 @@ input, select, textarea {
 
 				body.homepage #header h1 {
 					font-size: 2.5em;
+				}
+			
+				#bg-video-desktop {
+					display: none;
+				}
+
+				#header {
+					background-attachment: scroll !important;
+				}
+
+				#bg-video-mobile {
+					display: block;
+					object-fit: cover;
+					width: 100%;
+					height: 100%;
 				}
 
 		/* Nav */
