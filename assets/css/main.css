@@ -2279,7 +2279,8 @@ input, select, textarea {
 		opacity: 1;
 	}
 
-	#bg-video {
+	/* Common styles for both videos */
+	.bg-video {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -2291,13 +2292,21 @@ input, select, textarea {
 	pointer-events: none;
 	}
 
-	/* @media only screen and (max-width: 768px) {
-	#bg-video {
-		height: auto;
-		width: auto;
-		object-fit: cover;
+	/* Show desktop video by default */
+	#bg-video-mobile {
+	display: none;
 	}
-	} */
+
+	/* Show mobile video only on small screens */
+	@media only screen and (max-width: 768px) {
+	#bg-video-desktop {
+		display: none;
+	}
+
+	#bg-video-mobile {
+		display: block;
+	}
+	}
 
 /* Nav */
 
