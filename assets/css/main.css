@@ -2186,6 +2186,18 @@ input, select, textarea {
 		cursor: default;
 	}
 
+	/* On small screens */
+	@media only screen and (max-width: 768px) {
+	#header {
+		height: 70vh; /* smaller height on phones */
+	}
+
+	.header-content {
+		padding: 2rem 1rem;
+		font-size: 0.9rem;
+	}
+	}
+	
 		#header:before {
 			content: '';
 			display: inline-block;
